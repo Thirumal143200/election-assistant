@@ -1,0 +1,125 @@
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ─── Navbar ─── */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  margin: 0.75rem;
+  border-radius: 100px;
+  padding: 0;
+}
+
+.nav-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 1.25rem;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.brand-icon {
+  background: linear-gradient(135deg, var(--accent), #7c3aed);
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.brand-text {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.nav-pills {
+  display: flex;
+  gap: 0.3rem;
+  background: rgba(0, 0, 0, 0.25);
+  padding: 0.25rem;
+  border-radius: 100px;
+}
+
+.pill {
+  background: transparent;
+  border: none;
+  color: var(--text-dim);
+  padding: 0.45rem 1rem;
+  border-radius: 100px;
+  font-weight: 500;
+  font-family: inherit;
+  font-size: 0.88rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 0.25s;
+  white-space: nowrap;
+}
+
+.pill:hover {
+  color: var(--text-main);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.pill.active {
+  background: linear-gradient(135deg, var(--accent), #7c3aed);
+  color: white;
+  box-shadow: 0 2px 12px var(--accent-glow);
+}
+
+/* ─── Main ─── */
+.main-content {
+  flex: 1;
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+}
+
+.tab-panel {
+  width: 100%;
+}
+
+/* ─── Footer ─── */
+.app-footer {
+  text-align: center;
+  padding: 1.5rem 2rem;
+  color: var(--text-dim);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--glass-border);
+}
+
+.app-footer p { margin: 0; }
+
+/* ─── Responsive ─── */
+@media (max-width: 768px) {
+  .navbar {
+    border-radius: 18px;
+  }
+
+  .nav-inner {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .nav-pills {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .pill {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.82rem;
+  }
+}
